@@ -2,7 +2,7 @@ package day04scannerwrapper;
 
 import java.util.Scanner;
 
-public class Scanner05 {
+public class Scanner05_2 {
     public static void main(String[] args) {
         // kulanıcıdan alacağınınz 5 basamaklı bir sayının
         //ilk iki ve son iki basamağindaki rakamların toplamınını yazdıran kod

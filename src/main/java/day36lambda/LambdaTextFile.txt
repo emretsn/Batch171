@@ -1,0 +1,82 @@
+1. filter
+Belirtilen bir koşula göre elemanları süzmek için kullanılır.
+Predicate fonksiyonel arayüzü ile çalışır.
+2. map
+Her bir eleman üzerinde bir işlem yaparak, elemanları dönüştürmek için kullanılır.
+Function arayüzünü kullanarak, bir türden diğerine dönüşüm sağlar.
+3. reduce
+Bir akışın elemanlarını birleştirip tek bir sonuç üretmek için kullanılır.
+Örneğin, toplama, çarpma gibi işlemleri yapabilir.
+4. collect
+Stream'deki elemanları bir veri yapısına toplamak (liste, set, harita vb.) için kullanılır.
+Genellikle Collectors yardımcı sınıfıyla birlikte kullanılır.
+5. forEach
+Stream'deki her bir eleman üzerinde bir işlem yapmak için kullanılır.
+Yan etki (side-effect) için kullanılır, örneğin bir listeyi ekrana yazdırma.
+6. distinct
+Stream'deki tekrar eden elemanları filtreleyerek yalnızca benzersiz elemanları döndürür.
+7. sorted
+Stream'deki elemanları doğal sıralama ya da belirli bir karşılaştırıcıya göre sıralamak için kullanılır.
+8. limit
+Akıştaki eleman sayısını sınırlamak için kullanılır.
+İlk N elemanı almak için kullanılır.
+9. skip
+İlk N elemanı atlamak için kullanılır.
+Belirli sayıda elemanı geçmek ve geri kalanları işlemek için kullanılır.
+10. flatMap
+Her bir elemanı Stream'e dönüştürür ve ardından bu Stream'leri tek bir Stream'de birleştirir.
+Çok seviyeli koleksiyonlarla çalışırken kullanışlıdır.
+11. peek
+Stream üzerinde ara işlem yapmak için kullanılır. Genellikle debugging amacıyla kullanılır.
+12. allMatch
+Akıştaki tüm elemanların bir koşulu sağlayıp sağlamadığını kontrol eder. Sonuç olarak boolean döner.
+13. anyMatch
+Akıştaki herhangi bir elemanın belirtilen koşulu sağlayıp sağlamadığını kontrol eder. Sonuç olarak boolean döner.
+14. noneMatch
+Akıştaki hiçbir elemanın belirtilen koşulu sağlamadığını kontrol eder. Sonuç olarak boolean döner.
+15. findFirst
+Akıştaki ilk elemanı döndürür. Genellikle sıralı akışlarda kullanılır.
+16. findAny
+Akıştaki herhangi bir elemanı döndürür. Paralel akışlarda rastgele bir eleman dönebilir.
+17. max
+Akıştaki elemanlardan maksimum değeri bulur.
+Genellikle bir Comparator ile kullanılır.
+18. min
+Akıştaki elemanlardan minimum değeri bulur.
+Bir Comparator ile kullanılarak en küçük elemanı döndürür.
+19. count
+Stream'deki elemanların sayısını döner.
+Sonuç olarak long veri tipinde bir değer verir.
+20. toArray
+Stream'deki elemanları bir diziye dönüştürmek için kullanılır.
+21. takeWhile (Java 9+)
+Stream'deki elemanları belirtilen koşul sağlandığı sürece alır ve bir Stream döner.
+İlk "false" değeri döndüğünde işlemi durdurur.
+22. dropWhile (Java 9+)
+Belirtilen koşul sağlandığı sürece elemanları atlar ve geriye kalan elemanları döner.
+23. iterate (Java 9+)
+Bir başlangıç değeri ve bir güncelleme fonksiyonu ile sonsuz bir Stream oluşturur.
+Genellikle belirli bir sayıda eleman üretmek için limit ile birlikte kullanılır.
+24. generate
+Sonsuz bir Stream oluşturmak için kullanılır.
+Her bir çağrıda yeni bir değer üretir.
+25. unordered
+Stream'in sıralamasız bir Stream'e dönüştürülmesi için kullanılır.
+Sıralı olmayan operasyonlarda performans artışı sağlayabilir.
+26. parallel
+Akışı paralel olarak çalıştırmak için kullanılır.
+Büyük veri setlerinde işlemlerin daha hızlı yapılması için kullanılır.
+27. sequential
+Akışı sıralı bir hale getirir. Paralel olan bir Stream'i sıralı hale dönüştürmek için kullanılır.
+28. boxed
+Primitive tipteki Stream'leri (IntStream, LongStream, DoubleStream) referans tiplerine (Integer, Long, Double) dönüştürmek için kullanılır.
+29. flatMapToInt, flatMapToLong, flatMapToDouble
+Akıştaki elemanları IntStream, LongStream ya da DoubleStream gibi özel veri türü akışlarına dönüştürmek için kullanılır.
+30. mapToInt, mapToLong, mapToDouble
+Stream'deki elemanları int, long veya double türünde bir değere dönüştürmek için kullanılır. Özel veri türü akışları oluşturur.
+31. distinct
+Stream'deki tekrar eden elemanları kaldırmak ve sadece benzersiz elemanlarla bir Stream oluşturmak için kullanılır.
+32. concat
+İki ayrı Stream'i birleştirip tek bir Stream elde etmek için kullanılır.
+33. of
+Sabit elemanlarla bir Stream oluşturmak için kullanılır. Genellikle kısa liste akışları için tercih edilir.

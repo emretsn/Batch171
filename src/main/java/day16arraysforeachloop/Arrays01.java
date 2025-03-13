@@ -1,20 +1,20 @@
-package day06arraysforeachloop;
+package day16arraysforeachloop;
 
 import java.util.Arrays;
 
 public class Arrays01 {
     public static void main(String[] args) {
         int a = 13;
-        // bir yapının içinde çoklu data depolama için kullanılan yapıdır
-        // code yazarken çoklu data depolama ihtiyacı hissedilir
-        // çoklu data tipi tutabilirler
-        // Array nasıl oşuşturulur
 
         /*
         Array'ler diger collection'lardan cok daha hizlidir (superfast).
         Array'ler diger collection'lardan daha az memory kullanirlar.
+         NOT :
+            1- Bu yapinin icinde sadece bir tane data depolanabilir.
+            2- ama biz code yazarken bir yapinin icinde coklu data depolama ihtiyaci hissederiz.
+            3-Bir yapinin icinde coklu data depolayabilmek icin Java Array yapisini olustururuz.
          */
-        
+        // Array naıl oluşturulur
         String stdName [] = new String[5]; // kaç yer tutacağınını parantez içinde belirtmelisim
         // tostring methodu kullanılmazsa adresini yazdırır
         System.out.println(stdName);
@@ -26,7 +26,7 @@ public class Arrays01 {
         stdName[1]="mustafa";
         stdName[2]= "özlem";
         stdName[3]= "sedat";
-        stdName[4]= "çavuş";
+        stdName[4]= "emre";
 
         System.out.println(Arrays.toString(stdName));
         // arraydne spesifik bir elemanı nasıl alırız

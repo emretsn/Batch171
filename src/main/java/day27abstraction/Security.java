@@ -1,2 +1,5 @@
-package day27abstraction;public interface Security {
+package day27abstraction;
+
+public interface Security {
+
 }

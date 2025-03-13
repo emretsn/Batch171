@@ -1,12 +1,12 @@
 package day02datatypesmethodscreation;
 
-public class MethodsCreation01 {
+public class  MethodsCreation01 {
 
     /*
         Java da Method nasil olusturulur?
 
-        1) Min method un icinde Class in disinda olusturulur.
-        2) Access Modifier + Rreturn Type + Medhod Name + () + {}   adimlariyla olusur.
+        1) Main Methodun dışında classın içinde oluşturulur.
+        2) Access Modifier + return Type + Medhod Name + () + {}   adimlariyla olusur.
 
         Olusturulan Methodlar Nasil Kullanilir?
 
@@ -28,6 +28,10 @@ public class MethodsCreation01 {
         int cikti = carpTopla(5, 6, 2);
         System.out.println(cikti);
 
+        System.out.println(areaOfDk(4, 5));
+        int cevre = dikdörtgeninCevresi(4,5);
+        System.out.println("cevre = " + cevre);
+
     }
 //Orenek 1: toplama islemi yapan bir Method olusturn ve kallanin
 
@@ -35,6 +39,7 @@ public class MethodsCreation01 {
         return  a + b;
         // Return demek bu method un cagrildigi yere bu degeri "return" et (geri dondur) demek.
         // !NOTE: main method static oldugu icin main method icinde kullanacagimiz Method da static olmalidir.
+
     }
 
 // Ornek 2: Iki syayiyi carpma islemi yapan bir method olusturun ve yazdirin
@@ -51,8 +56,16 @@ public class MethodsCreation01 {
     private static int carpTopla(int x, int y, int z){
         return x*y+z;
 
-    } }
+    }
+ public static int areaOfDk(int a,int b){
+        return a*b;
 
+ }
+ public static int  dikdörtgeninCevresi(int a, int b){
+        return 2*a +2*b;
+ }
+}
+// control alt l-
 /* Homework2
 1) Dikdortgenin alanini hesaplayan methodu olusturun ve kullanin
 2) Dikdortgenin cevresini hesaplayan methodu olusturun ve kullanin.

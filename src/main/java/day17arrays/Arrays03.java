@@ -2,47 +2,65 @@ package day17arrays;
 
 import java.util.Arrays;
 
-public class Arrays023 {
+public class Arrays03 {
     public static void main(String[] args) {
-        // spwsific bir elemanın arrayin içinde olup olmadığını bulan kodu yazınız
 
-        String names[] = {"k","v","c", "f", "r"};
-        String el = "x";
-        // 1. ways
-        int counter = 0 ;
+        //Specific bir elemanin array de olup olmadigini anlamak icin gereken kodu yaziniz
+        String names[] = {"K", "C", "R", "A", "S"};
+        String el = "R";
 
-        for (String w: names    ) {
- if(w.equalsIgnoreCase(el)){
-     counter++ ;
-     break;
- }
-        }
-        if (counter>0){
-            System.out.println("array has "  + el);
-        }else {
-            System.out.println("array does not have " + el);
+        //1. way
+        int counter = 0;
+
+        for (String w : names) {
+
+            if (w.equals(el)) {
+                counter++;
+                break;
+            }
         }
 
-        //2. yol binarySearch() ;
+        if (counter > 0) {
+            System.out.println("Array has " + el);
+        } else {
+            System.out.println("Array does not have " + el);
+        }
+
+
 
         /*
-        binarysearch() methodunu sort() olmadan sıralı olmadan kullanamayız
-        binarySearch size var olan bir elemanın indexini verir .
-        buradan aldığınız index 0 yada 0 dan buyukse o eleman arrayde var demektir
-        binarySearch methodu olmayan elemanlar için negatif bir tam sayı değeri verir
-        "-" işaretinin anlamı o eleMAN YOK DEMEKTİR
-        "sayı ise o elman olsaydı
-
+        1)binarySearch() methodunu sort() kullanmadan kullanmayiniz, cunku binarySearch() mantigi sirali elemanlar icin gecerlidir
+        2)binarySearch() methodu var olan elemanlar icin size o elemanin index ini verir
+        3)binarySearch() methodundan aldiginiz index 0 veya 0 dan buyukse bu o eleman arrayde var demektir
+        4)binarySearch() methodu olmayan elemanlar icin negatif tamsayi degeri verir.
+        "-" isaretinin anlami o eleman yok demektir.
+        "sayi" ise o eleman olsaydi kacinci eleman olurdu demektir
          */
 
+        //2. way : binarySearch() methodu hizli calisir
         Arrays.sort(names);
-        int result = Arrays.binarySearch(names,el);
-        System.out.println(result);
-        if (result< 0 ){
-            System.out.println("array does not have "+ el);
+        int result = Arrays.binarySearch(names, el);
 
-        }else {
-            System.out.println("array have  " + el);
+        if(result<0){
+            System.out.println("Array does not have "+el);
+        }else{
+            System.out.println("Array has "+el);
         }
+
+        System.out.println(Arrays.toString(names));//[A, C, K, R, S]
+
+        int num1= Arrays.binarySearch(names,"A");
+        System.out.println(num1);//0 ==> var hem de indexi sifirdir
+
+
+        int num2= Arrays.binarySearch(names,"K");
+        System.out.println(num2);//2 ==> var hem de indexi ikidir
+
+        int num3= Arrays.binarySearch(names,"U");
+        System.out.println(num3);//-6 ==> "-" bu eleman yok demek
+        //6 ise olsaydi Altinci eleman olurdu
+
+
+
     }
 }

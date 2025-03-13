@@ -2,15 +2,29 @@ package day09ifstatements;
 
 import java.util.Scanner;
 
-public class IfStatement02
-{
+public class IfStatements02 {
     public static void main(String[] args) {
+        //Ornek: Kullanicidan alinan bir sayinin tek mi cift mi oldugunu konsola yazdiriniz
         Scanner input = new Scanner(System.in);
-        System.out.println("please enter a number");
-        int num = input.nextInt();
-        if (num%2==0 ){
-            System.out.println("the Number is dual");
+        System.out.println("Lutfen bir sayi giriniz...");
+        int num =input.nextInt();
+
+        //1.Yol
+        if(num%2==0){
+            System.out.println("Cift sayi...");
         }
-        else System.out.println("the number is singel");
+
+        if(num%2!=0){
+            System.out.println("Tek sayi");
+        }
+
+        //2. Yol ==> kontrol edilen condition sayisi az oldugundan dolayi tavsiye edilir
+        if(num%2==0){
+            System.out.println("Cift sayi");
+        }else{//aksi halde
+            System.out.println("Tek sayidir");
+        }
+
+
     }
 }

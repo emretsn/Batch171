@@ -1,2 +1,4 @@
-package day09ifstatements;public class exercise06 {
+package day09ifstatements;
+
+public class exercise06 {
 }

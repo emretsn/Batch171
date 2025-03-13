@@ -2,7 +2,7 @@ package atmApp;
 
 import java.util.Scanner;
 
-public class AtmApp {
+public class Atm {
     /* Q01
     Bakıye (başlangıç bakıyesi 1000 tl)
     öğrenme,

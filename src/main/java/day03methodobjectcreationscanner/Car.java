@@ -1,3 +1,5 @@
+package day03methodobjectcreationscanner;
+
 public class Car {
 
     //Variable'lar olusturalim
@@ -12,4 +14,8 @@ public class Car {
     public void dur(){
         System.out.println("Cok guvenli bir sekilde durur..");
     }
+    // teacher object creation homework
+
+
+
 }
